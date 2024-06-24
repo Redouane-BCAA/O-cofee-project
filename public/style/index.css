@@ -1,0 +1,39 @@
+@import url(./base/reset.css);
+@import url(./base/topology.css);
+@import url(./base/variables.css);
+@import url(./components/btn-links.css);
+@import url(./components/product-card.css);
+@import url(./layout/header.css);
+@import url(./layout/footer.css);
+@import url(./pages/home.css);
+@import url(./pages/catalogue.css);
+@import url(./pages/product.css);
+@import url(./pages/404.css);
+@import url(./pages/contact.css);
+@import url(./pages/about.css);
+@import url(./pages/cart.css);
+
+* {
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  background: #F2F3EB;
+  font-family: 'Montserrat', Arial, sans-serif;
+}
+.page-ctn {
+  padding: 0 30px;
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+}
+.section{
+  width: 100%;
+}
+h1,
+h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: var(--text-dark);
+}

@@ -1,0 +1,41 @@
+.cart-main {
+  height: 80%;
+}
+.cart_section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  p,
+  table {
+    margin-bottom: 20px;
+  }
+  .cart-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  table {
+    img {
+      height: 50px;
+      width: 80px;
+    }
+    tr {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-bottom: 15px;
+      input {
+        width: 50px;
+      }
+      .td-name {
+        width: 150px;
+      }
+      .delete-cart{
+        cursor: pointer;
+        color: var(--text-dark);
+      }
+    }
+  }
+}

@@ -1,0 +1,25 @@
+.btn_link {
+  max-width: 300px;
+  color: var(--text-white);
+  background-color: var(--text-dark);
+  font-weight: 600;
+  opacity: 0.8;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #000;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.btn_link:hover {
+  opacity: 1;
+}
+.btn_link i {
+  transition: all 0.3s ease;
+  margin: 0 5px;
+}
+.btn_link:hover i.fa-arrow-left {
+  transform: translateX(-5px);
+}
+.btn_link:hover i.fa-arrow-right {
+  transform: translateX(5px);
+}

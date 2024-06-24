@@ -1,0 +1,18 @@
+<article class="product_card">
+  <img
+    class="news_card_bg"
+    src="/assets/coffee-images/<%= coffee.reference%>.png"
+    alt="photo du produit"
+  />
+  <div class="darkness-bg"></div>
+  <aside>
+    <h3><%= coffee.name%></h3>
+    <p><%= coffee.description%></p>
+    <a
+      class="btn_link"
+      href="/product/<%= coffee.id%>"
+      aria-label="link to product page"
+      >Découvrir le produit <i class="fa-solid fa-arrow-right"></i></a
+    >
+  </aside>
+</article>

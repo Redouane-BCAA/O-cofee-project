@@ -1,0 +1,51 @@
+<%- include('./partials/header.ejs') %>
+<main class="cart-main">
+  <section class="section cart_section">
+    <h2>Panier</h2>
+    <% if (cart.length === 0) { %>
+    <p>Votre panier est vide.</p>
+    <% } else { %>
+    <form class="cart-form" action="/update-cart" method="post">
+      <table>
+        <tbody>
+          <% cart.forEach((item, index) => { %>
+          <tr>
+            <td>
+              <img
+                src="../assets/coffee-images/<%= item.reference %>.png"
+                alt="image du produit"
+                class="cart_img"
+              />
+            </td>
+            <td class="td-name"><%= item.name %></td>
+            <td><%= item.price %> €</td>
+            <td>
+              <input
+                type="hidden"
+                name="products[<%= index %>][productId]"
+                value="<%= item.id %>"
+              />
+              <input
+                type="number"
+                name="products[<%= index %>][quantity]"
+                value="<%= item.quantity %>"
+                min="0"
+              />
+            </td>
+            <td><%= (item.price * item.quantity).toFixed(2) %> €</td>
+          </tr>
+          <% }) %>
+        </tbody>
+      </table>
+      <button class="btn_link" type="submit">Mettre à jour le panier</button>
+    </form>
+
+    <p><strong>Total :</strong> <%= totalPrice.toFixed(2) %> €</p>
+    <% } %>
+    <a class="btn_link" href="/catalogue"
+      ><i class="fa-solid fa-arrow-left"></i> Continuer vos achats</a
+    >
+  </section>
+</main>
+<%- include('./partials/footer.ejs') %>
+

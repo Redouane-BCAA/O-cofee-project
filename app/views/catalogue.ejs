@@ -1,0 +1,29 @@
+<%- include('./partials/header.ejs') %>
+<main>
+  <section class="section catalogue_hero_section">
+    <div class="catalogue_hero_container">
+      <img src="../assets/catalogue-hero.jpg" alt="image de différentes tasses de café">
+      <h2>Notre catalogue</h2>
+    </div>
+  </section>
+  <section class="section catalogue_products_section">
+    <form method="GET" action="/catalogue" class="catalogue_filter_form">
+      <select class="btn_link" name="categorie" id="categorie">
+        <option value="">Catégories</option>
+        <% categories.forEach(category => { %>
+          <option value="<%= category.name %>" <%= selectedCategory === category.name ? 'selected' : '' %>><%= category.name %></option>
+        <% }) %>
+      </select>
+      <button type="submit" class="btn_link">Filtrer</button>
+    </form>
+    <div class="catalogue_card_container" aria-label="News card container">
+      <div class="card_container">
+        <% allCoffee.forEach(coffee => { %>
+          <%- include('./partials/coffee-card.ejs', {coffee}) %>
+        <% }) %>
+      </div>
+      <button id="view_all_btn" class="btn_link view_all_btn <%= allCoffee.length <= 3 ? 'display-none' : '' %>">Voir tout</button>
+    </div>
+  </section>
+</main>
+<%- include('./partials/footer.ejs') %>

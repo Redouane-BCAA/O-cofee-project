@@ -1,0 +1,56 @@
+.news_card,
+.product_card {
+  position: relative;
+  width: 30%;
+  height: 370px;
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 5px;
+
+  .darkness-bg {
+    width: 100%;
+    height: 50%;
+    position: absolute;
+    bottom: 0;
+    background-color: #000;
+    opacity: 0.5;
+    transition: opacity 0.3s ease;
+  }
+  .news_card_bg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+  aside {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 0 20px;
+    width: 100%;
+    height: 50%;
+    position: absolute;
+    bottom: 0;
+    color: white;
+    h3 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: white;
+      text-align: center;
+    }
+    p {
+      text-align: center;
+    }
+  }
+}
+.news_card:hover,
+.product_card:hover {
+  .news_card_bg {
+    transform: scale(1.1);
+  }
+  .darkness-bg {
+    opacity: 0.8;
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "name": "s09-redouane-bcaa",
+  "version": "1.0.0",
+  "description": "[Le projet](./docs/demande-client/)",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "npx nodemon app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@emailjs/browser": "^4.3.3",
+    "dotenv": "^16.4.5",
+    "ejs": "^3.1.10",
+    "emailjs-com": "^3.2.0",
+    "express": "^4.19.2",
+    "express-session": "^1.18.0",
+    "pg": "^8.12.0"
+  }
+}

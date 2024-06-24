@@ -1,0 +1,45 @@
+<%- include('./partials/header.ejs') %>
+<main>
+  <section class="section product_hero_section">
+    <div class="product_hero_container">
+      <!-- <h2>Brazilian Santos</h2> -->
+      <img
+        src="../assets/coffee-images/100955890.png"
+        alt="image de différentes tasses de café"
+      />
+    </div>
+  </section>
+  <section class="section product_informations_section">
+    <div class="product_informations_article">
+      <img
+        src="../assets/coffee-images/<%= coffee.reference %>.png"
+        alt="image du produit"
+        class="product_img"
+      />
+      <div class="product_information_txt">
+        <h2 class="product_title"><%= coffee.name %></h2>
+        <h4 class="product_description"><%= coffee.description %></h4>
+        <div class="product_details">
+          <p><strong>Origine :</strong> <%= coffee.origin %></p>
+          <p><strong>Prix au kilo :</strong> <%= coffee.price %> €</p>
+          <p>
+            <strong>Caractéristique principale :</strong> <%=
+            coffee.characteristic %>
+          </p>
+          <p><strong>Disponibilité :</strong> 
+            <%= coffee.available ? 'En Stock' : 'Rupture de stock' %> 
+            <i class="fa-solid fa-circle <%= coffee.available ? 'green' : 'red' %>"></i>
+          </p>
+        </div>
+        <form class="add-form" action="/add-to-cart" method="post">
+          <input type="hidden" name="productId" value="<%= coffee.id %>">
+          <label class="<%= coffee.available ? '' : 'display-none' %>" for="quantity">Quantité :</label>
+          <input class="<%= coffee.available ? '' : 'display-none' %>" type="number" id="quantity" name="quantity" value="1" min="1">
+          <button class="<%= coffee.available ? '' : 'display-none' %>" type="submit"><i class="fa-solid fa-cart-plus"></i></button> 
+        </form>
+        <a class="btn_link" href="/catalogue"> <i class="fa-solid fa-arrow-left"></i> Retour vers catalogue</a>
+      </div>
+    </div>
+  </section>
+</main>
+<%- include('./partials/footer.ejs') %>

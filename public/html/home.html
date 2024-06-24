@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Rédouane B" />
+    <meta name="description" content="e-shop o'coffee" />
+    <meta name="publisher" content="Student O'Cclock Rédouane B" />
+    <meta name="keywords" content="o'coffee Oclock Rédouane e-shop" />
+    <title>O'coffee</title>
+    <!-- FAVICON  -->
+    <link rel="shortcut icon" type="image/x-icon" href="../assets/logo.svg" />
+    <!-- CSS  -->
+    <link rel="stylesheet" href="../style/index.css" />
+    <!-- JS  -->
+    <script type="module" src="../js/index.js"></script>
+  </head>
+  <body class="page-ctn">
+    <header>
+      <div class="header-logo">
+        <img
+          src="../assets/logo.svg"
+          alt="logo o'cofee"
+          width="48"
+          height="48"
+        />
+        <h1>O'Coffee</h1>
+      </div>
+      <nav>
+        <ul class="nav_links">
+          <li><a href="./home.html">Acceuil</a></li>
+          <li><a href="./catalogue.html">Catalogue</a></li>
+          <li><a href="./product.html">A propos</a></li>
+          <li><a href="./product.html">Panier</a></li>
+        </ul>
+        <div id="burger-btn" class="burger-btn"></div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="section presentation">
+        <article class="presentation_txt">
+          <h2 class="section_title">
+            Bienvenue chez <span>O'Coffee,</span> <br />
+            votre expert du café !
+          </h2>
+          <p class="section_subtitle">
+            Découvrez un univers où chaque tasse de café raconte une histoire
+            unique. Fondée par Jean et Jacques Pepper, notre boutique célèbre
+            l'art et la passion du café. Plongez dans une ambiance chaleureuse
+            et laissez-vous guider par nos experts vers une expérience café
+            inoubliable.
+          </p>
+          <a class="btn_link" href="./catalogue.html">Voir le catalogue</a>
+        </article>
+        <img
+          class="presentation_img"
+          src="../assets/about.jpg"
+          alt="image de grain de café"
+        />
+      </section>
+      <section class="section news">
+        <h2 class="news_title">Nouveautés</h2>
+        <div class="news_slide_container">
+          <button class="slide_btn prev" aria-label="Previous slide">
+            &#10094;
+          </button>
+          <div class="news_card_container" aria-label="News card container">
+            <article class="news_card">
+              <img
+                class="news_card_bg"
+                src="../assets/coffee-images/134009550.png"
+                alt="photo du produit"
+              />
+              <div class="darkness-bg"></div>
+              <aside>
+                <h3>Brazilian Santos</h3>
+                <p>Café doux et lisse avec un profil de saveur de noisette.</p>
+                <a class="btn_link" href="./product.html" aria-label="link to product page"
+                  >Découvrir</a
+                >
+              </aside>
+            </article>
+            <article class="news_card">
+              <img
+                class="news_card_bg"
+                src="../assets/coffee-images/295432730.png"
+                alt="photo du produit"
+              />
+              <div class="darkness-bg"></div>
+              <aside>
+                <h3>Kenyan AA</h3>
+                <p>
+                  Café complexe connu pour son acidité rappelant le vin et ses
+                  saveurs fruitées.
+                </p>
+                <a class="btn_link" href="./product.html" aria-label="link to product page"
+                  >Découvrir</a
+                >
+              </aside>
+            </article>
+            <article class="news_card">
+              <img
+                class="news_card_bg"
+                src="../assets/coffee-images/100955894.png"
+                alt="photo du produit"
+              />
+              <div class="darkness-bg"></div>
+              <aside>
+                <h3>Columbian</h3>
+                <p>
+                  Café moyennement corsé avec une acidité vive et une saveur
+                  riche.
+                </p>
+                <a class="btn_link" href="./product.html" aria-label="link to product page"
+                  >Découvrir</a
+                >
+              </aside>
+            </article>
+          </div>
+          <button class="slide_btn next" aria-label="Next slide">
+            &#10095;
+          </button>
+        </div>
+      </section>
+    </main>
+
+  </body>
+</html>
