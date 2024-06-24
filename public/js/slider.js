@@ -1,7 +1,7 @@
 export function setUpSlider() {
 
   const container = document.querySelector('.news_card_container');
-  const cards = document.querySelectorAll('.news_card');
+  const cards = document.querySelectorAll('.product_card');
   const prevBtn = document.querySelector('.prev');
   const nextBtn = document.querySelector('.next');
 

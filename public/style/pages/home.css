@@ -80,7 +80,7 @@ main {
       .news_card_container {
         transition: transform 0.5s ease;
 
-        .news_card {
+        .product_card {
           min-width: 100%;
           transition: transform 0.5s ease;
         }
